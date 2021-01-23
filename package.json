@@ -14,7 +14,8 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",
     "core-js": "^3.8.2",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-purgecss": "^1.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
@@ -31,7 +32,7 @@
     "eslint": "^7.18.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.4.1",
-    "postcss": "^8.2.4",
+    "postcss": "^7.0.35",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
