@@ -13,18 +13,14 @@
 export default {
   data () {
     return {
-      weekList: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      weekList: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       activeDay: 0,
       textClass: ''
     }
   },
   created () {
     const day = new Date().getDay()
-    if (day > 0) {
-      this.activeDay = day - 1
-    } else {
-      this.activeDay = 0
-    }
+    this.activeDay = day
   },
   mounted () {
     this.$root.$on('changed-text-class', (val) => {
