@@ -1,5 +1,5 @@
 <template>
-  <div class="text-3xl" :class="`text-${textClass}`">
+  <div class="text-3xl" :class="textClassName">
     {{ date }}
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
         day: 'numeric'
       }),
       textClass: ''
+    }
+  },
+  computed: {
+    textClassName () {
+      return `text-${this.textClass}`
     }
   },
   mounted () {
