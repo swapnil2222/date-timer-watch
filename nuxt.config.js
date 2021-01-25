@@ -4,7 +4,9 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  router: {
+    base: '/date-timer-watch/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'date-timer-watch',
