@@ -53,5 +53,5 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## References
-1. Get random quotes. api.quotable.io
+1. Get random quotes. https://github.com/lukePeavey/quotable
 2. Deploy the nuxt application to github using github actions. https://nuxtjs.org/docs/2.x/deployment/github-pages
