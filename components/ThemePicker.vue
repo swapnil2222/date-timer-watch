@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="flex flex-row justify-end">
-      <li v-for="(color, idx) in colors" :key="idx" class="flex mr-2 pt-2">
+      <li v-for="(color, idx) in colors" :key="idx" class="flex pt-2 mr-2">
         <component
           :is="`icon-${color}`"
           :class="getClasses(color)"
@@ -13,20 +13,18 @@
 </template>
 
 <script>
-import IconSystem from "@/assets/icons/system.svg?inline";
 import IconLight from "@/assets/icons/light.svg?inline";
 import IconSepia from "@/assets/icons/sepia.svg?inline";
 import IconDark from "@/assets/icons/dark.svg?inline";
 export default {
   components: {
-    IconSystem,
     IconLight,
     IconSepia,
     IconDark,
   },
   data() {
     return {
-      colors: ["dark", "light", "system", "sepia"],
+      colors: ["dark", "light", "sepia"],
     };
   },
   methods: {
