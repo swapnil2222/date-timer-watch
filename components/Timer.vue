@@ -10,55 +10,49 @@
       {{ minutes }}
       <span class="text-5xl">{{ hours > 12 ? "PM" : "AM" }}</span>
     </div>
-    <div v-else class="loading" :class="`text-${textClass}`">
-      loading....
-    </div>
+    <div v-else class="loading" :class="`text-${textClass}`">loading....</div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      hours: '',
-      minutes: '',
+      hours: "",
+      minutes: "",
       isBlink: false,
-      textClass: ''
-    }
+      textClass: "",
+    };
   },
   computed: {
-    blinkStyle () {
+    blinkStyle() {
       if (!this.isBlink) {
-        return { visibility: 'hidden' }
+        return { visibility: "hidden" };
       }
-      return {}
-    }
+      return {};
+    },
   },
-  created () {
+  created() {
     setInterval(() => {
-      this.getTime()
-    }, 1000)
+      this.getTime();
+    }, 1000);
     setInterval(() => {
-      this.isBlink = !this.isBlink
-    }, 500)
+      this.isBlink = !this.isBlink;
+    }, 500);
   },
-  mounted () {
-    this.$root.$on('changed-text-class', (val) => {
-      this.textClass = val
-    })
+  mounted() {
+    this.$root.$on("changed-text-class", (val) => {
+      this.textClass = val;
+    });
   },
   methods: {
-    getTime () {
-      const date = new Date()
+    getTime() {
+      const date = new Date();
       this.hours =
-        date.getHours() < 10
-          ? '0' + date.getHours()
-          : date.getHours()
+        date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
       this.minutes =
-        date.getMinutes() < 10
-          ? '0' + date.getMinutes()
-          : date.getMinutes()
-    }
-  }
-}
+        date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    },
+  },
+};
 </script>

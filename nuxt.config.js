@@ -3,26 +3,26 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: "static",
   router: {
-    base: '/date-timer-watch/'
+    base: "/date-timer-watch/",
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'date-timer-watch',
+    title: "date-timer-watch",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ["@/assets/css/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -33,45 +33,45 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    "@nuxtjs/stylelint-module",
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/svg',
-    'nuxt-purgecss'
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/svg",
+    "nuxt-purgecss",
   ],
   purgeCSS: {
     // your settings here
     enabled: ({ isDev, isClient }) => !isDev && isClient, // or `false` when in dev/debug mode
     paths: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js'
+      "components/**/*.vue",
+      "layouts/**/*.vue",
+      "pages/**/*.vue",
+      "plugins/**/*.js",
     ],
-    styleExtensions: ['.css'],
+    styleExtensions: [".css"],
     whitelist: [
-      'text-sky-blue',
-      'text-light-gray',
-      'text-light-sky-blue',
-      'text-light-brick',
-      'text-light-black',
-      'text-dark-brick',
-      'text-dark-blue'
+      "text-sky-blue",
+      "text-light-gray",
+      "text-light-sky-blue",
+      "text-light-brick",
+      "text-light-black",
+      "text-dark-brick",
+      "text-dark-blue",
     ],
     extractors: [
       {
-        extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
-        extensions: ['html', 'vue', 'js']
-      }
-    ]
+        extractor: (content) => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ["html", "vue", "js"],
+      },
+    ],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
-}
+  build: {},
+};
