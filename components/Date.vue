@@ -6,25 +6,25 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      date: new Date().toLocaleDateString('en-Us', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+      date: new Date().toLocaleDateString("en-Us", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       }),
-      textClass: ''
-    }
+      textClass: "",
+    };
   },
   computed: {
-    textClassName () {
-      return `text-${this.textClass}`
-    }
+    textClassName() {
+      return `text-${this.textClass}`;
+    },
   },
-  mounted () {
-    this.$root.$on('changed-text-class', (val) => {
-      this.textClass = val
-    })
-  }
-}
+  mounted() {
+    this.$root.$on("changed-text-class", (val) => {
+      this.textClass = val;
+    });
+  },
+};
 </script>

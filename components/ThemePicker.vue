@@ -13,34 +13,34 @@
 </template>
 
 <script>
-import IconSystem from '@/assets/icons/system.svg?inline'
-import IconLight from '@/assets/icons/light.svg?inline'
-import IconSepia from '@/assets/icons/sepia.svg?inline'
-import IconDark from '@/assets/icons/dark.svg?inline'
+import IconSystem from "@/assets/icons/system.svg?inline";
+import IconLight from "@/assets/icons/light.svg?inline";
+import IconSepia from "@/assets/icons/sepia.svg?inline";
+import IconDark from "@/assets/icons/dark.svg?inline";
 export default {
   components: {
     IconSystem,
     IconLight,
     IconSepia,
-    IconDark
+    IconDark,
   },
-  data () {
+  data() {
     return {
-      colors: ['dark', 'light', 'system', 'sepia']
-    }
+      colors: ["dark", "light", "system", "sepia"],
+    };
   },
   methods: {
-    getClasses (color) {
+    getClasses(color) {
       if (this.$colorMode.unknown) {
-        return {}
+        return {};
       }
       return {
         preferred: color === this.$colorMode.preference,
-        selected: color === this.$colorMode.value
-      }
-    }
-  }
-}
+        selected: color === this.$colorMode.value,
+      };
+    },
+  },
+};
 </script>
 
 <style scoped>

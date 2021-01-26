@@ -6,32 +6,31 @@
       :key="idx"
       :class="activeColorId === idx ? 'active' : ''"
       :style="{ background: value }"
-      class="mr-4 rounded-full h-12
-    w-12 flex items-center justify-center"
+      class="flex items-center justify-center w-12 h-12 mr-4 rounded-full"
       @click="changeColor(idx, key)"
     />
   </div>
 </template>
 
 <script>
-import colors from '../assets/js/colors.js'
+import colors from "../assets/js/colors.js";
 export default {
-  data () {
+  data() {
     return {
       colorObj: colors,
-      activeColorId: 0
-    }
+      activeColorId: 0,
+    };
   },
-  mounted () {
-    this.changeColor(0, Object.keys(colors)[0])
+  mounted() {
+    this.changeColor(0, Object.keys(colors)[0]);
   },
   methods: {
-    changeColor (id, classVal) {
-      this.activeColorId = id
-      this.$root.$emit('changed-text-class', classVal)
-    }
-  }
-}
+    changeColor(id, classVal) {
+      this.activeColorId = id;
+      this.$root.$emit("changed-text-class", classVal);
+    },
+  },
+};
 </script>
 <style>
 .active {

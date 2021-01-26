@@ -1,12 +1,12 @@
 <template>
   <div v-if="quoteObj.content && quoteObj.author" class="quote">
-    <span :class="`text-${textClass}`" class="content text-2xl font-bold italic">
+    <span
+      :class="`text-${textClass}`"
+      class="text-2xl italic font-bold content"
+    >
       "{{ quoteObj.content }}"
     </span>
-    <span
-      class="author text-xl font-bold"
-      :class="`text-${textClass}`"
-    >
+    <span class="text-xl font-bold author" :class="`text-${textClass}`">
       - {{ quoteObj.author }}
     </span>
   </div>
@@ -14,26 +14,26 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       quoteObj: {},
-      textClass: ''
-    }
+      textClass: "",
+    };
   },
-  created () {
-    this.getQuote()
+  created() {
+    this.getQuote();
   },
-  mounted () {
-    this.$root.$on('changed-text-class', (val) => {
-      this.textClass = val
-    })
+  mounted() {
+    this.$root.$on("changed-text-class", (val) => {
+      this.textClass = val;
+    });
   },
   methods: {
-    async getQuote () {
-      const res = await fetch('https://api.quotable.io/random?maxLength=90')
-      const data = await res.json()
-      this.quoteObj = data
-    }
-  }
-}
+    async getQuote() {
+      const res = await fetch("https://api.quotable.io/random?maxLength=90");
+      const data = await res.json();
+      this.quoteObj = data;
+    },
+  },
+};
 </script>
