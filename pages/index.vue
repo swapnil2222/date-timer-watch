@@ -14,7 +14,7 @@
       <quote />
     </div>
     <div class="flex mx-auto mt-24">
-      <color-picker />
+      <ColorPicker />
     </div>
   </div>
 </template>
